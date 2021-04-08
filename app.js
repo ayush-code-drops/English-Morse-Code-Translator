@@ -9,7 +9,7 @@ var url = "https://api.funtranslations.com/translate/morse.json?text="
 function clickHandler() {
     var inputValue = txtInput.value
     fetch(url+inputValue)
-        .then(response => response.json)
+        .then(response => response.json())
         .then(json => {
             var translatedTxt = json.contents.translated
         txtOutput.innerHTML=translatedTxt})
